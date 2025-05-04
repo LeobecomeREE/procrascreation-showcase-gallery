@@ -1,0 +1,90 @@
+
+import React from "react";
+import ProjectCard from "./ProjectCard";
+
+const Gallery = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "Handcrafted Jewelry",
+      description: "Unique handmade pieces crafted with attention to detail and quality materials.",
+      imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
+    },
+    {
+      id: 2,
+      title: "Custom Illustrations",
+      description: "Personalized artwork designed to capture your vision and style.",
+      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
+    },
+    {
+      id: 3,
+      title: "Textile Creations",
+      description: "Handwoven textiles that blend traditional techniques with modern designs.",
+      imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80",
+    },
+    {
+      id: 4,
+      title: "Paper Craft",
+      description: "Intricate paper designs and custom stationery for special occasions.",
+      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80",
+    },
+    {
+      id: 5,
+      title: "Ceramic Art",
+      description: "Hand-shaped ceramic pieces that combine functionality with artistic expression.",
+      imageUrl: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80",
+    },
+    {
+      id: 6,
+      title: "Digital Creations",
+      description: "Modern digital art that pushes the boundaries of creativity.",
+      imageUrl: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&q=80",
+    },
+  ];
+
+  return (
+    <section id="gallery" className="section-padding bg-muted">
+      <div className="container-custom">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="inline-block px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full mb-3">
+            Our Portfolio
+          </span>
+          <h2 className="heading-lg mb-4">Explore Our Creative Works</h2>
+          <p className="text-gray-600">
+            Discover our collection of handcrafted creations, each made with care and passion.
+            These projects showcase our dedication to quality and creativity.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imageUrl={project.imageUrl}
+            />
+          ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <a 
+            href="https://www.instagram.com/procrascreation"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium"
+          >
+            <span>View More on Instagram</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Gallery;
