@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const Footer = () => {
@@ -13,7 +12,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/4f2cc170-bfe2-4d42-88cc-6cf8c28d49ea.png" 
                 alt="Procrascreation Logo" 
-                className="h-10 w-auto mr-2"
+                className="h-10 w-auto mr-2 object-contain mix-blend-screen"
               />
               <h2 className="text-2xl font-playfair font-bold text-white">
                 Procras<span className="text-secondary">creation</span>
