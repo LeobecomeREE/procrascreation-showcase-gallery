@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const Footer = () => {
@@ -10,9 +11,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/4f2cc170-bfe2-4d42-88cc-6cf8c28d49ea.png" 
+                src="/lovable-uploads/6de71b21-281c-4eee-97be-db9bfcf87cb2.png" 
                 alt="Procrascreation Logo" 
-                className="h-10 w-auto mr-2 object-contain mix-blend-screen"
+                className="h-10 w-auto mr-2 object-contain"
               />
               <h2 className="text-2xl font-playfair font-bold text-white">
                 Procras<span className="text-secondary">creation</span>
