@@ -8,37 +8,37 @@ const Gallery = () => {
       id: 1,
       title: "Handcrafted Jewelry",
       description: "Unique handmade pieces crafted with attention to detail and quality materials.",
-      imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
+      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
     },
     {
       id: 2,
       title: "Custom Illustrations",
       description: "Personalized artwork designed to capture your vision and style.",
-      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
+      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
     },
     {
       id: 3,
       title: "Textile Creations",
       description: "Handwoven textiles that blend traditional techniques with modern designs.",
-      imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80",
+      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
     },
     {
       id: 4,
       title: "Paper Craft",
       description: "Intricate paper designs and custom stationery for special occasions.",
-      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80",
+      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
     },
     {
       id: 5,
       title: "Ceramic Art",
       description: "Hand-shaped ceramic pieces that combine functionality with artistic expression.",
-      imageUrl: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80",
+      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
     },
     {
       id: 6,
       title: "Digital Creations",
       description: "Modern digital art that pushes the boundaries of creativity.",
-      imageUrl: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&q=80",
+      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
     },
   ];
 
