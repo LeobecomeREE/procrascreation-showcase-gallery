@@ -8,37 +8,37 @@ const Gallery = () => {
       id: 1,
       title: "Handcrafted Jewelry",
       description: "Unique handmade pieces crafted with attention to detail and quality materials.",
-      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
+      imageUrl: "/lovable-uploads/4300d0ff-fc5d-4843-b6c5-6f516aca63f7.png",
     },
     {
       id: 2,
       title: "Custom Illustrations",
       description: "Personalized artwork designed to capture your vision and style.",
-      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
+      imageUrl: "/lovable-uploads/d670c0a3-5301-4fee-b98f-848243cdf55b.png",
     },
     {
       id: 3,
       title: "Textile Creations",
       description: "Handwoven textiles that blend traditional techniques with modern designs.",
-      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
+      imageUrl: "/lovable-uploads/7100b34a-2780-422b-99ac-b749d760f807.png",
     },
     {
       id: 4,
       title: "Paper Craft",
       description: "Intricate paper designs and custom stationery for special occasions.",
-      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
+      imageUrl: "/lovable-uploads/4300d0ff-fc5d-4843-b6c5-6f516aca63f7.png",
     },
     {
       id: 5,
       title: "Ceramic Art",
       description: "Hand-shaped ceramic pieces that combine functionality with artistic expression.",
-      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
+      imageUrl: "/lovable-uploads/d670c0a3-5301-4fee-b98f-848243cdf55b.png",
     },
     {
       id: 6,
       title: "Digital Creations",
       description: "Modern digital art that pushes the boundaries of creativity.",
-      imageUrl: "/lovable-uploads/50f71ac3-d384-4171-8420-ca09b08f04fe.png",
+      imageUrl: "/lovable-uploads/7100b34a-2780-422b-99ac-b749d760f807.png",
     },
   ];
 
