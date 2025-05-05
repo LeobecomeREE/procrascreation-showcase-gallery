@@ -43,14 +43,14 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="section-padding bg-muted">
+    <section id="gallery" className="section-padding bg-navy-light">
       <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="inline-block px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full mb-3">
+          <span className="inline-block px-3 py-1 text-sm font-medium bg-white/10 text-white rounded-full mb-3">
             Our Portfolio
           </span>
-          <h2 className="heading-lg mb-4">Explore Our Creative Works</h2>
-          <p className="text-gray-600">
+          <h2 className="heading-lg mb-4 text-white">Explore Our Creative Works</h2>
+          <p className="text-white/70">
             Discover our collection of handcrafted creations, each made with care and passion.
             These projects showcase our dedication to quality and creativity.
           </p>
@@ -72,7 +72,7 @@ const Gallery = () => {
             href="https://www.instagram.com/procrascreation"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium"
+            className="inline-flex items-center gap-2 text-secondary hover:text-white font-medium"
           >
             <span>View More on Instagram</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
