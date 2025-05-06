@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
@@ -44,10 +43,10 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Replace these with your actual EmailJS service ID, template ID, and public key
-      const serviceId = "YOUR_SERVICE_ID"; // Replace with your Service ID
-      const templateId = "YOUR_TEMPLATE_ID"; // Replace with your Template ID
-      const publicKey = "YOUR_PUBLIC_KEY"; // Replace with your Public Key
+      // EmailJS credentials
+      const serviceId = "service_b8kulc8";
+      const templateId = "template_35yaodd";
+      const publicKey = "98Vf9cC3qdcvuXk_r";
       
       // Send the email
       const result = await emailjs.send(
