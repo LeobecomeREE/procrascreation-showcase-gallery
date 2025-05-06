@@ -4,30 +4,30 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { 
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage 
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 // Define form validation schema
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." })
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters."
+  }),
+  email: z.string().email({
+    message: "Please enter a valid email address."
+  }),
+  message: z.string().min(10, {
+    message: "Message must be at least 10 characters."
+  })
 });
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef();
-  
+
   // Initialize react-hook-form
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,55 +37,45 @@ const Contact = () => {
       message: ""
     }
   });
-
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     // Show loading state
     setIsSubmitting(true);
-    
     try {
       // EmailJS credentials
       const serviceId = "service_b8kulc8";
       const templateId = "template_35yaodd";
       const publicKey = "98Vf9cC3qdcvuXk_r";
-      
+
       // Send the email
-      const result = await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          name: values.name,
-          email: values.email,
-          message: values.message
-        },
-        publicKey
-      );
-      
+      const result = await emailjs.send(serviceId, templateId, {
+        name: values.name,
+        email: values.email,
+        message: values.message
+      }, publicKey);
       console.log("Email sent successfully:", result.text);
-      
+
       // Show success message
       toast({
         title: "Message Sent!",
-        description: "Thank you for reaching out. We'll get back to you soon.",
+        description: "Thank you for reaching out. We'll get back to you soon."
       });
-      
+
       // Reset form
       form.reset();
     } catch (error) {
       console.error("Error sending email:", error);
-      
+
       // Show error message
       toast({
         title: "Failed to send message",
         description: "There was a problem sending your message. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
-  return (
-    <section id="contact" className="section-padding bg-navy-dark">
+  return <section id="contact" className="section-padding bg-navy-dark">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
@@ -108,7 +98,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Contact Info</h3>
-                  <p className="text-white/60 mt-1">info@procrascreation.com</p>
+                  <p className="text-white/60 mt-1">procrascreation</p>
                 </div>
               </div>
               
@@ -135,12 +125,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Social Media</h3>
-                  <a 
-                    href="https://www.instagram.com/procrascreation"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-secondary hover:text-white hover:underline mt-1 inline-block"
-                  >
+                  <a href="https://www.instagram.com/procrascreation" target="_blank" rel="noreferrer" className="text-secondary hover:text-white hover:underline mt-1 inline-block">
                     @procrascreation
                   </a>
                 </div>
@@ -151,66 +136,37 @@ const Contact = () => {
           <div className="glass-effect p-6 md:p-8 rounded-xl shadow-md">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="name" render={({
+                field
+              }) => <FormItem>
                       <FormLabel className="text-sm font-medium text-white/90">Your Name</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="John Doe"
-                          className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                          {...field}
-                        />
+                        <Input placeholder="John Doe" className="bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
                       </FormControl>
                       <FormMessage className="text-red-300" />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
                 
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="email" render={({
+                field
+              }) => <FormItem>
                       <FormLabel className="text-sm font-medium text-white/90">Email Address</FormLabel>
                       <FormControl>
-                        <Input
-                          type="email"
-                          placeholder="john@example.com"
-                          className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                          {...field}
-                        />
+                        <Input type="email" placeholder="john@example.com" className="bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
                       </FormControl>
                       <FormMessage className="text-red-300" />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
                 
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
+                <FormField control={form.control} name="message" render={({
+                field
+              }) => <FormItem>
                       <FormLabel className="text-sm font-medium text-white/90">Your Message</FormLabel>
                       <FormControl>
-                        <Textarea
-                          placeholder="I'm interested in..."
-                          className="min-h-[120px] bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                          {...field}
-                        />
+                        <Textarea placeholder="I'm interested in..." className="min-h-[120px] bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
                       </FormControl>
                       <FormMessage className="text-red-300" />
-                    </FormItem>
-                  )}
-                />
+                    </FormItem>} />
                 
-                <Button
-                  type="submit"
-                  className="w-full bg-white hover:bg-white/90 text-navy"
-                  disabled={isSubmitting}
-                >
+                <Button type="submit" className="w-full bg-white hover:bg-white/90 text-navy" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
@@ -218,8 +174,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
