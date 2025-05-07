@@ -14,10 +14,6 @@ const About = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-white text-navy p-4 rounded-lg shadow-lg hidden md:block">
-              <p className="font-playfair text-3xl font-bold">5+</p>
-              <p className="text-sm">Years of Creativity</p>
-            </div>
           </div>
           
           <div>
@@ -35,22 +31,6 @@ const About = () => {
               We believe in the power of creation and the joy it brings to both the maker and the recipient. 
               Each piece in our collection is crafted with care, attention to detail, and a touch of imagination.
             </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10">
-                <h3 className="text-secondary font-playfair text-xl font-medium mb-2">Our Mission</h3>
-                <p className="text-white/70 text-sm">
-                  To create unique, high-quality handcrafted items that bring joy and inspiration to our customers.
-                </p>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm p-5 rounded-lg border border-white/10">
-                <h3 className="text-secondary font-playfair text-xl font-medium mb-2">Our Vision</h3>
-                <p className="text-white/70 text-sm">
-                  To inspire creativity and share our passion for handcrafted art with the world.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

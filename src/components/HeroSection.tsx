@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-8 py-20 relative">
         <div className="flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-            Showcase Your <span className="gradient-text">Creative</span> Work With <span className="text-black">Style</span>
+            Where <span className="gradient-text">Procrascreation</span> Meets <span className="text-black">Creativity</span>
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-xl">
             A beautiful gallery to display your portfolio, photography, art, or any creative work. Make your projects stand out with our stunning showcase platform.
@@ -29,10 +29,10 @@ const HeroSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="rounded-md border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-gray-900 px-6 py-2.5 h-auto font-medium gradient-border"
+              className="rounded-md border-gray-300 hover:bg-gray-100 px-6 py-2.5 h-auto font-medium gradient-border"
               asChild
             >
-              <a href="#about">Learn More</a>
+              <a href="#about" className="gradient-text">Learn More</a>
             </Button>
           </div>
         </div>

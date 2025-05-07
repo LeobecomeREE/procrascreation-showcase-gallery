@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
@@ -166,7 +167,7 @@ const Contact = () => {
                       <FormMessage className="text-red-300" />
                     </FormItem>} />
                 
-                <Button type="submit" className="w-full bg-white hover:bg-white/90 text-navy" disabled={isSubmitting}>
+                <Button type="submit" className="w-full gradient-primary hover:opacity-90 text-white" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>

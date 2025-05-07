@@ -16,7 +16,7 @@ const Footer = () => {
       {/* Main footer content with gradient background */}
       <div className="pt-16 pb-12 bg-gradient-to-br from-[#1A1F36] via-[#2D3250] to-[#1A1F36] text-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center mb-4">
                 <div className="logo-gradient w-10 h-10 flex items-center justify-center rounded-full mr-2 p-0.5">
@@ -116,26 +116,6 @@ const Footer = () => {
                   Follow us on Instagram
                 </li>
               </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-medium mb-4 text-purple-200">Newsletter</h3>
-              <p className="text-gray-300 mb-4">
-                Subscribe to our newsletter to receive updates on new products and promotions.
-              </p>
-              <form className="flex">
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="flex-1 rounded-l-md py-2 px-4 bg-white/10 text-white border-white/20 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                />
-                <button className="gradient-primary hover:opacity-90 text-white px-4 py-2 rounded-r-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </button>
-              </form>
             </div>
           </div>
           
