@@ -26,14 +26,6 @@ const HeroSection = () => {
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-md border-gray-300 hover:bg-gray-100 px-6 py-2.5 h-auto font-medium gradient-border"
-              asChild
-            >
-              <a href="#about" className="text-purple-700 font-semibold">Learn More</a>
-            </Button>
           </div>
         </div>
         <div className="hidden lg:block relative">
