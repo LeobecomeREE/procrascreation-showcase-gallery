@@ -44,10 +44,14 @@ const Navbar = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <div className="bg-primary w-10 h-10 flex items-center justify-center rounded-full mr-2">
-            <span className="text-white font-bold text-lg">P</span>
+          <div className="logo-gradient w-12 h-12 flex items-center justify-center rounded-full mr-2 p-1 shadow-md">
+            <img 
+              src="/lovable-uploads/76d42db3-0485-4efc-a386-67dcd60ca676.png"
+              alt="Procrascreation Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
-          <h1 className="text-2xl font-medium text-primary">
+          <h1 className="text-2xl font-medium gradient-text">
             Procrascreation
           </h1>
         </a>

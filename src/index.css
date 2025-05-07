@@ -79,4 +79,26 @@
   .glass-effect {
     @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-md;
   }
+  
+  .gradient-primary {
+    @apply bg-gradient-to-r from-violet-600 via-purple-500 to-indigo-500;
+  }
+  
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-purple-500 to-indigo-500;
+  }
+  
+  .gradient-border {
+    @apply border-2 border-transparent bg-origin-border bg-clip-border;
+    background-image: linear-gradient(to right, #8B5CF6, #6366F1);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) padding-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+  
+  .logo-gradient {
+    background: linear-gradient(102.3deg, rgba(147,39,143,1) 5.9%, rgba(178,80,187,1) 64%, rgba(229,131,255,1) 89%);
+  }
 }
