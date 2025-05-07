@@ -1,59 +1,52 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-navy-dark via-navy to-navy-light pt-16">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-5"></div>
-      <div className="container-custom relative z-10 flex flex-col items-start justify-center py-20">
-        <div className="max-w-2xl">
-          <span className="inline-block px-3 py-1 text-sm font-medium bg-white/10 text-white rounded-full mb-6">
-            Creative Portfolio
-          </span>
-          <h1 className="heading-xl mb-6 leading-tight text-white">
-            Bringing Your <span className="text-secondary">Creative</span> Ideas to Life
+    <section id="home" className="relative min-h-screen flex items-center bg-background pt-16">
+      <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-8 py-20">
+        <div className="flex flex-col justify-center">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+            Showcase Your <span className="text-primary">Creative</span> Work With <span className="text-black">Style</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
-            Welcome to Procrascreation, where creativity never waits for tomorrow.
-            Explore our unique handcrafted creations made with passion and dedication.
+          <p className="text-lg text-gray-600 mb-8 max-w-xl">
+            A beautiful gallery to display your portfolio, photography, art, or any creative work. Make your projects stand out with our stunning showcase platform.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button
               size="lg"
-              className="bg-white hover:bg-white/90 text-navy rounded-full"
+              className="bg-primary hover:bg-primary/90 text-white rounded-md px-6 py-2.5 h-auto font-medium"
               asChild
             >
-              <a href="#gallery">Explore Gallery</a>
+              <a href="#gallery" className="flex items-center gap-2">
+                Explore Gallery
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="rounded-full border-white text-white hover:bg-white/10"
+              className="rounded-md border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-gray-900 px-6 py-2.5 h-auto font-medium"
               asChild
             >
-              <a href="#contact">Get in Touch</a>
+              <a href="#about">Learn More</a>
             </Button>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#gallery" className="text-white/50 hover:text-white">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+        <div className="hidden lg:block relative">
+          <div className="rounded-2xl overflow-hidden shadow-xl transform translate-x-4 translate-y-4">
+            <img 
+              src="/lovable-uploads/44882744-1d8e-4e92-ac62-1f81eee77a80.png" 
+              alt="Art Gallery" 
+              className="w-full h-[500px] object-cover"
             />
-          </svg>
-        </a>
+            <div className="absolute bottom-0 left-0 bg-primary/80 text-white py-2 px-4 rounded-tr-lg">
+              <p className="font-medium">Art Categories</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

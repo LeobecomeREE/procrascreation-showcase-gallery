@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Instagram } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,29 +38,27 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-navy/95 backdrop-blur-sm shadow-sm py-3"
+          ? "bg-white/95 backdrop-blur-sm shadow-sm py-3"
           : "bg-transparent py-5"
       )}
     >
       <div className="container-custom flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <img 
-            src="/lovable-uploads/6de71b21-281c-4eee-97be-db9bfcf87cb2.png" 
-            alt="Procrascreation Logo" 
-            className="h-10 w-auto mr-2 object-contain"
-          />
-          <h1 className="text-2xl font-playfair font-bold text-white">
-            Procras<span className="text-secondary">creation</span>
+          <div className="bg-primary w-10 h-10 flex items-center justify-center rounded-full mr-2">
+            <span className="text-white font-bold text-lg">P</span>
+          </div>
+          <h1 className="text-2xl font-medium text-primary">
+            Procrascreation
           </h1>
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-white/80 hover:text-white font-medium transition-colors"
+              className="text-gray-700 hover:text-primary font-medium transition-colors"
             >
               {link.name}
             </a>
@@ -68,16 +67,17 @@ const Navbar = () => {
             href="https://www.instagram.com/procrascreation"
             target="_blank"
             rel="noreferrer"
-            className="text-secondary font-medium hover:text-white hover:underline"
+            className="text-gray-700 hover:text-primary transition-colors"
+            aria-label="Instagram"
           >
-            Instagram
+            <Instagram className="h-5 w-5" />
           </a>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden text-white flex items-center"
+          className="md:hidden text-gray-700 flex items-center"
           aria-label="Toggle menu"
         >
           <svg
@@ -107,13 +107,13 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-navy shadow-md p-4 md:hidden animate-fade-in">
+          <div className="absolute top-full left-0 right-0 bg-white shadow-md p-4 md:hidden animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-white/80 hover:text-white font-medium"
+                  className="text-gray-700 hover:text-primary font-medium"
                   onClick={toggleMenu}
                 >
                   {link.name}
@@ -123,9 +123,10 @@ const Navbar = () => {
                 href="https://www.instagram.com/procrascreation"
                 target="_blank"
                 rel="noreferrer"
-                className="text-secondary font-medium hover:text-white"
+                className="text-gray-700 hover:text-primary font-medium flex items-center gap-2"
                 onClick={toggleMenu}
               >
+                <Instagram className="h-4 w-4" />
                 Instagram
               </a>
             </div>

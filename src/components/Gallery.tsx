@@ -43,20 +43,18 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="section-padding bg-navy-light">
+    <section id="gallery" className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="inline-block px-3 py-1 text-sm font-medium bg-white/10 text-white rounded-full mb-3">
-            Our Portfolio
-          </span>
-          <h2 className="heading-lg mb-4 text-white">Explore Our Creative Works</h2>
-          <p className="text-white/70">
-            Discover our collection of handcrafted creations, each made with care and passion.
-            These projects showcase our dedication to quality and creativity.
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Featured <span className="text-primary">Projects</span>
+          </h2>
+          <p className="text-gray-600">
+            Discover our most impressive and creative works showcasing innovation and artistic excellence.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
@@ -72,7 +70,7 @@ const Gallery = () => {
             href="https://www.instagram.com/procrascreation"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 text-secondary hover:text-white font-medium"
+            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium"
           >
             <span>View More on Instagram</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
