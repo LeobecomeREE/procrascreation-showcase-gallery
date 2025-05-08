@@ -1,5 +1,5 @@
 
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,12 +22,10 @@ const formSchema = z.object({
     message: "Message must be at least 10 characters."
   })
 });
+
 const Contact = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const formRef = useRef();
 
   // Initialize react-hook-form
   const form = useForm<z.infer<typeof formSchema>>({
@@ -38,6 +36,7 @@ const Contact = () => {
       message: ""
     }
   });
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     // Show loading state
     setIsSubmitting(true);
@@ -76,6 +75,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
+
   return <section id="contact" className="section-padding bg-navy-dark">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -134,40 +134,53 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="glass-effect p-6 md:p-8 rounded-xl shadow-md">
+          <div className="glass-effect p-6 md:p-8 rounded-xl shadow-md bg-navy-light">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField control={form.control} name="name" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel className="text-sm font-medium text-white/90">Your Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="John Doe" className="bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
-                      </FormControl>
-                      <FormMessage className="text-red-300" />
-                    </FormItem>} />
+                <FormField control={form.control} name="name" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-white">Your Name</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="John Doe" 
+                        className="bg-navy-dark/80 border-white/20 text-white placeholder:text-white/50" 
+                        {...field} 
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-300" />
+                  </FormItem>
+                )} />
                 
-                <FormField control={form.control} name="email" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel className="text-sm font-medium text-white/90">Email Address</FormLabel>
-                      <FormControl>
-                        <Input type="email" placeholder="john@example.com" className="bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
-                      </FormControl>
-                      <FormMessage className="text-red-300" />
-                    </FormItem>} />
+                <FormField control={form.control} name="email" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-white">Email Address</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="email" 
+                        placeholder="john@example.com" 
+                        className="bg-navy-dark/80 border-white/20 text-white placeholder:text-white/50" 
+                        {...field} 
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-300" />
+                  </FormItem>
+                )} />
                 
-                <FormField control={form.control} name="message" render={({
-                field
-              }) => <FormItem>
-                      <FormLabel className="text-sm font-medium text-white/90">Your Message</FormLabel>
-                      <FormControl>
-                        <Textarea placeholder="I'm interested in..." className="min-h-[120px] bg-white/10 border-white/20 text-white placeholder:text-white/50" {...field} />
-                      </FormControl>
-                      <FormMessage className="text-red-300" />
-                    </FormItem>} />
+                <FormField control={form.control} name="message" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium text-white">Your Message</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="I'm interested in..." 
+                        className="min-h-[120px] bg-navy-dark/80 border-white/20 text-white placeholder:text-white/50" 
+                        {...field} 
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-300" />
+                  </FormItem>
+                )} />
                 
-                <Button type="submit" className="w-full gradient-primary hover:opacity-90 text-white" disabled={isSubmitting}>
+                <Button type="submit" className="w-full text-white font-medium" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
@@ -177,4 +190,5 @@ const Contact = () => {
       </div>
     </section>;
 };
+
 export default Contact;
