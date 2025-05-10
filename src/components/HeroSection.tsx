@@ -1,9 +1,10 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
   return <section id="home" className="relative min-h-screen flex items-center bg-background pt-16">
-      <div className="absolute inset-0 bg-gradient-to-b from-violet-50/50 via-purple-50/30 to-white/10 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-blue-50/30 to-white/10 pointer-events-none"></div>
       <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-8 py-20 relative">
         <div className="flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -21,7 +22,7 @@ const HeroSection = () => {
         </div>
         <div className="hidden lg:block relative">
           <div className="rounded-2xl overflow-hidden shadow-xl transform translate-x-4 translate-y-4 relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 via-violet-500/20 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-blue-500/20 to-transparent z-10 pointer-events-none"></div>
             <img src="/lovable-uploads/44882744-1d8e-4e92-ac62-1f81eee77a80.png" alt="Art Gallery" className="w-full h-[500px] object-cover" />
             <div className="absolute bottom-0 left-0 gradient-primary text-white py-3 px-5 rounded-tr-lg z-20">
               <p className="font-medium">Art Categories</p>
@@ -30,7 +31,7 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-purple-50/30 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-blue-50/30 to-transparent"></div>
     </section>;
 };
 export default HeroSection;

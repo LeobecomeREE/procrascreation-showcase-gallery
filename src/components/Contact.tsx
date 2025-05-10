@@ -92,7 +92,7 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="flex items-start gap-3">
-                <div className="rounded-full bg-white/10 p-2 text-white">
+                <div className="rounded-full bg-blue-500/20 p-2 text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
@@ -104,7 +104,7 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start gap-3">
-                <div className="rounded-full bg-white/10 p-2 text-white">
+                <div className="rounded-full bg-blue-500/20 p-2 text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
@@ -117,7 +117,7 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start gap-3">
-                <div className="rounded-full bg-white/10 p-2 text-white">
+                <div className="rounded-full bg-blue-500/20 p-2 text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                     <path d="M8 21h8"></path>
@@ -126,7 +126,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-white">Social Media</h3>
-                  <a href="https://www.instagram.com/procrascreation" target="_blank" rel="noreferrer" className="text-secondary hover:text-white hover:underline mt-1 inline-block">
+                  <a href="https://www.instagram.com/procrascreation" target="_blank" rel="noreferrer" className="text-blue-300 hover:text-white hover:underline mt-1 inline-block">
                     @procrascreation
                   </a>
                 </div>
@@ -134,7 +134,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="glass-effect p-6 md:p-8 rounded-xl shadow-md bg-navy-light">
+          <div className="bg-navy-dark/90 p-6 md:p-8 rounded-xl shadow-md border border-blue-500/20">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField control={form.control} name="name" render={({ field }) => (
@@ -143,7 +143,7 @@ const Contact = () => {
                     <FormControl>
                       <Input 
                         placeholder="John Doe" 
-                        className="bg-navy-dark/80 border-white/20 text-white placeholder:text-white/50" 
+                        className="bg-navy-dark border-blue-500/30 text-white placeholder:text-white/50" 
                         {...field} 
                       />
                     </FormControl>
@@ -158,7 +158,7 @@ const Contact = () => {
                       <Input 
                         type="email" 
                         placeholder="john@example.com" 
-                        className="bg-navy-dark/80 border-white/20 text-white placeholder:text-white/50" 
+                        className="bg-navy-dark border-blue-500/30 text-white placeholder:text-white/50" 
                         {...field} 
                       />
                     </FormControl>
@@ -172,7 +172,7 @@ const Contact = () => {
                     <FormControl>
                       <Textarea 
                         placeholder="I'm interested in..." 
-                        className="min-h-[120px] bg-navy-dark/80 border-white/20 text-white placeholder:text-white/50" 
+                        className="min-h-[120px] bg-navy-dark border-blue-500/30 text-white placeholder:text-white/50" 
                         {...field} 
                       />
                     </FormControl>

@@ -14,7 +14,7 @@ const Footer = () => {
       </div>
 
       {/* Main footer content with gradient background */}
-      <div className="pt-16 pb-12 bg-gradient-to-br from-[#1A1F36] via-[#2D3250] to-[#1A1F36] text-white">
+      <div className="pt-16 pb-12 bg-gradient-to-br from-[#1E3A5F] via-[#2D5080] to-[#1E3A5F] text-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -27,7 +27,7 @@ const Footer = () => {
                   />
                 </div>
                 <h2 className="text-2xl font-playfair font-bold text-white">
-                  Procras<span className="text-purple-300">creation</span>
+                  Procras<span className="text-blue-300">creation</span>
                 </h2>
               </div>
               <p className="text-gray-300 mb-4 max-w-xs">
@@ -39,7 +39,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
-                  className="text-white hover:text-purple-300 transition-colors"
+                  className="text-white hover:text-blue-300 transition-colors"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -50,7 +50,7 @@ const Footer = () => {
                 <a
                   href="#"
                   aria-label="Twitter"
-                  className="text-white hover:text-purple-300 transition-colors"
+                  className="text-white hover:text-blue-300 transition-colors"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
                     <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
@@ -59,7 +59,7 @@ const Footer = () => {
                 <a
                   href="#"
                   aria-label="Facebook"
-                  className="text-white hover:text-purple-300 transition-colors"
+                  className="text-white hover:text-blue-300 transition-colors"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -69,25 +69,25 @@ const Footer = () => {
             </div>
             
             <div>
-              <h3 className="text-lg font-medium mb-4 text-purple-200">Quick Links</h3>
+              <h3 className="text-lg font-medium mb-4 text-blue-200">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#home" className="text-gray-300 hover:text-purple-300 transition-colors">
+                  <a href="#home" className="text-gray-300 hover:text-blue-300 transition-colors">
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#gallery" className="text-gray-300 hover:text-purple-300 transition-colors">
+                  <a href="#gallery" className="text-gray-300 hover:text-blue-300 transition-colors">
                     Gallery
                   </a>
                 </li>
                 <li>
-                  <a href="#about" className="text-gray-300 hover:text-purple-300 transition-colors">
+                  <a href="#about" className="text-gray-300 hover:text-blue-300 transition-colors">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-300 hover:text-purple-300 transition-colors">
+                  <a href="#contact" className="text-gray-300 hover:text-blue-300 transition-colors">
                     Contact
                   </a>
                 </li>
@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
             
             <div>
-              <h3 className="text-lg font-medium mb-4 text-purple-200">Contact Us</h3>
+              <h3 className="text-lg font-medium mb-4 text-blue-200">Contact Us</h3>
               <ul className="space-y-2">
                 <li className="flex items-center text-gray-300">
                   <span className="mr-2">
@@ -119,15 +119,15 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="border-t border-gray-700/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="border-t border-blue-700/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">
               © {currentYear} Procrascreation. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 space-x-4">
-              <a href="#" className="text-gray-400 hover:text-purple-300">
+              <a href="#" className="text-gray-400 hover:text-blue-300">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-300">
+              <a href="#" className="text-gray-400 hover:text-blue-300">
                 Terms of Service
               </a>
             </div>
