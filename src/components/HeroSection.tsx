@@ -1,34 +1,22 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const HeroSection = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center bg-background pt-16">
+  return <section id="home" className="relative min-h-screen flex items-center bg-background pt-16">
       {/* 3D Printer animation background */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <div className="absolute left-0 w-3/5 h-full">
-          <iframe 
-            src="https://my.spline.design/3dprinter-apJSr6w4Kyhgw2oHQWxD8bYo/" 
-            frameBorder="0" 
-            width="100%" 
-            height="100%"
-            className="w-full h-full"
-            title="3D Printer Animation Background"
-            allow="autoplay"
-            onEnded={() => {
-              // Force iframe reload to restart animation when it ends
-              const iframe = document.querySelector('iframe');
-              if (iframe) {
-                const src = iframe.src;
-                iframe.src = '';
-                setTimeout(() => {
-                  iframe.src = src;
-                }, 100);
-              }
-            }}
-          ></iframe>
+          <iframe src="https://my.spline.design/3dprinter-apJSr6w4Kyhgw2oHQWxD8bYo/" frameBorder="0" width="100%" height="100%" className="w-full h-full" title="3D Printer Animation Background" allow="autoplay" onEnded={() => {
+          // Force iframe reload to restart animation when it ends
+          const iframe = document.querySelector('iframe');
+          if (iframe) {
+            const src = iframe.src;
+            iframe.src = '';
+            setTimeout(() => {
+              iframe.src = src;
+            }, 100);
+          }
+        }}></iframe>
         </div>
       </div>
       
@@ -50,19 +38,10 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-        <div className="hidden lg:block relative">
-          <div className="glass-effect rounded-2xl overflow-hidden shadow-xl transform translate-x-4 translate-y-4 relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-blue-500/20 to-transparent z-10 pointer-events-none"></div>
-            <div className="w-full h-[500px] flex items-center justify-center">
-              <h3 className="text-2xl font-medium text-blue-800">Featured Projects</h3>
-            </div>
-          </div>
-        </div>
+        
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 via-blue-50/30 to-transparent z-10"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
