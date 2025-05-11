@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+
 const HeroSection = () => {
   return <section id="home" className="relative min-h-screen flex items-center bg-background pt-16">
       <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-blue-50/30 to-white/10 pointer-events-none"></div>
@@ -23,7 +24,14 @@ const HeroSection = () => {
         <div className="hidden lg:block relative">
           <div className="rounded-2xl overflow-hidden shadow-xl transform translate-x-4 translate-y-4 relative">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-blue-500/20 to-transparent z-10 pointer-events-none"></div>
-            <img src="/lovable-uploads/44882744-1d8e-4e92-ac62-1f81eee77a80.png" alt="Art Gallery" className="w-full h-[500px] object-cover" />
+            <iframe 
+              src="https://my.spline.design/3dprinter-apJSr6w4Kyhgw2oHQWxD8bYo/" 
+              frameBorder="0" 
+              width="100%" 
+              height="500px"
+              className="w-full h-[500px]"
+              title="3D Printer Model"
+            ></iframe>
             <div className="absolute bottom-0 left-0 gradient-primary text-white py-3 px-5 rounded-tr-lg z-20">
               <p className="font-medium">Art Categories</p>
             </div>
@@ -34,4 +42,5 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-blue-50/30 to-transparent"></div>
     </section>;
 };
+
 export default HeroSection;
