@@ -1,22 +1,48 @@
-import React from "react";
+
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+
 const HeroSection = () => {
-  return <section id="home" className="relative min-h-screen flex items-center bg-background pt-16">
-      {/* 3D Printer animation background */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-        <div className="absolute left-0 w-3/5 h-full">
-          <iframe src="https://my.spline.design/3dprinter-apJSr6w4Kyhgw2oHQWxD8bYo/" frameBorder="0" width="100%" height="100%" className="w-full h-full" title="3D Printer Animation Background" allow="autoplay" onEnded={() => {
-          // Force iframe reload to restart animation when it ends
-          const iframe = document.querySelector('iframe');
-          if (iframe) {
-            const src = iframe.src;
-            iframe.src = '';
-            setTimeout(() => {
-              iframe.src = src;
-            }, 100);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  
+  useEffect(() => {
+    // Set up a timer to refresh the animation every 3 seconds
+    const refreshTimer = setInterval(() => {
+      if (iframeRef.current) {
+        const src = iframeRef.current.src;
+        iframeRef.current.src = '';
+        setTimeout(() => {
+          if (iframeRef.current) {
+            iframeRef.current.src = src;
           }
-        }}></iframe>
+        }, 100);
+      }
+    }, 3000);
+
+    return () => clearInterval(refreshTimer);
+  }, []);
+
+  return (
+    <section id="home" className="relative min-h-screen flex items-center bg-background pt-16">
+      {/* 3D Printer animation background - positioned on the right */}
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <div className="absolute right-0 w-3/5 h-full">
+          <iframe 
+            ref={iframeRef}
+            src="https://my.spline.design/3dprinter-apJSr6w4Kyhgw2oHQWxD8bYo/" 
+            frameBorder="0" 
+            width="100%" 
+            height="100%" 
+            className="w-full h-full" 
+            title="3D Printer Animation Background"
+            allow="autoplay"
+            style={{ position: 'relative' }}
+          />
+          {/* Overlay to hide the Spline logo */}
+          <div className="absolute bottom-0 right-0 bg-white px-3 py-1 rounded-md">
+            &nbsp;
+          </div>
         </div>
       </div>
       
@@ -42,6 +68,8 @@ const HeroSection = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/80 via-blue-50/30 to-transparent z-10"></div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
